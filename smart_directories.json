@@ -1,0 +1,39 @@
+{
+    "PythonDocs": {
+        "name": "PythonDocs",
+        "criteria": {
+            "base_directories": [
+                "./test_data/test_data_1"
+            ],
+            "file_types": [
+                ".txt",
+                ".md"
+            ],
+            "tags_all_of": [
+                "python"
+            ],
+            "semantic_query": "advanced python programming concepts",
+            "semantic_model": "all-MiniLM-L6-v2",
+            "semantic_threshold": 0.3
+        },
+        "created_at": "2025-05-23T00:32:30.527830"
+    },
+    "MachineLearningIntro": {
+        "name": "MachineLearningIntro",
+        "criteria": {
+            "base_directories": [
+                "./test_data/test_data_3"
+            ],
+            "file_types": [
+                ".txt",
+                ".md"
+            ],
+            "content_keywords_any_of": [
+                "neural network",
+                "machine learning"
+            ],
+            "semantic_query": "introduction to artificial intelligence"
+        },
+        "created_at": "2025-05-23T00:34:30.402989"
+    }
+}

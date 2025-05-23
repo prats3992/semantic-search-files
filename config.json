@@ -1,0 +1,50 @@
+{
+  "default_model_name": "all-MiniLM-L6-v2",
+  "index_base_directory": "./semantic_indices",
+  "tag_file_path": "./semantic_tags.json",
+  "smart_dirs_file_path": "./smart_directories.json",
+  "recommended_models": [
+    {
+      "name": "all-MiniLM-L6-v2",
+      "use_case": "General purpose, good balance of speed and performance. Excellent for semantic search, clustering, and paraphrase identification for English.",
+      "dimension": 384,
+      "size_speed": "Small, very fast.",
+      "notes": "Symmetric model. Part of the MiniLM family, distilled from larger models. Good default choice."
+    },
+    {
+      "name": "all-mpnet-base-v2",
+      "use_case": "Top-performing general-purpose model for semantic search, paraphrase identification, clustering.",
+      "dimension": 768,
+      "size_speed": "Medium size, good speed.",
+      "notes": "Symmetric model. Often provides higher quality embeddings than MiniLM variants."
+    },
+    {
+      "name": "multi-qa-MiniLM-L6-cos-v1",
+      "use_case": "Optimized for Question Answering. Good for semantic search where queries are questions and documents are potential answers.",
+      "dimension": 384,
+      "size_speed": "Small, fast.",
+      "notes": "Asymmetric model structure, but often used symmetrically. Tuned on 215M (question, answer) pairs."
+    },
+    {
+      "name": "paraphrase-albert-small-v2",
+      "use_case": "Paraphrase identification, semantic similarity. Albert architecture.",
+      "dimension": 768,
+      "size_speed": "Small, relatively fast.",
+      "notes": "Can be good for tasks where detecting nuanced semantic similarity is key. Note: Albert models might have specific tokenization needs for optimal performance."
+    },
+    {
+      "name": "sentence-transformers/stsb-roberta-large",
+      "use_case": "Semantic Textual Similarity (STS). Tuned specifically on STS benchmark.",
+      "dimension": 1024,
+      "size_speed": "Large, slower.",
+      "notes": "High performance on STS tasks. Use if computational cost is less of a concern and high accuracy on similarity is paramount."
+    },
+    {
+      "name": "sentence-transformers/msmarco-distilbert-base-tas-b",
+      "use_case": "Optimized for semantic search (information retrieval) using dot-product. TAS-B (Topic-Aware Sampling for BERT) training.",
+      "dimension": 768,
+      "size_speed": "Medium, good speed.",
+      "notes": "Asymmetric: different embeddings for query and document are recommended for optimal performance (requires specific handling not implemented by default in current FaissIndexer). Can be used symmetrically but might be suboptimal. Store document embeddings, then encode query separately at search time."
+    }
+  ]
+}

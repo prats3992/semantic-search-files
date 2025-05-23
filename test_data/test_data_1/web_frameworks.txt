@@ -1,0 +1,28 @@
+Python has several popular web frameworks that cater to different needs, from building large, complex web applications to small microservices and APIs.
+
+- **Django**:
+  - A high-level "batteries-included" framework that encourages rapid development and clean, pragmatic design.
+  - Follows the MVT (Model-View-Template) architectural pattern.
+  - Provides an Object-Relational Mapper (ORM) for database interactions, an admin interface, a templating system, form handling, and security features out-of-the-box.
+  - Suitable for building complex, database-driven websites and applications.
+  - Has a large ecosystem and strong community support.
+
+- **Flask**:
+  - A microframework, meaning it provides the basics (routing, request handling, templating via Jinja2, Werkzeug for WSGI) to get started with more flexibility for extensions.
+  - Does not enforce any particular project structure or dependencies, giving developers more freedom.
+  - Relies on extensions for features like ORM (e.g., SQLAlchemy via Flask-SQLAlchemy), form validation (e.g., WTForms via Flask-WTF), authentication, etc.
+  - Ideal for smaller applications, APIs, or when you want more control over the components you use.
+
+- **FastAPI**:
+  - A modern, fast (high-performance) web framework for building APIs with Python 3.7+ based on standard Python type hints.
+  - Built on top of Starlette (for web parts) and Pydantic (for data validation and settings management).
+  - Offers automatic data model validation, serialization, and documentation (using OpenAPI and JSON Schema).
+  - Supports asynchronous request handling natively, making it very efficient for I/O-bound tasks.
+  - Gaining popularity rapidly due to its speed, ease of use, and excellent developer experience.
+
+Other notable frameworks:
+- **Pyramid**: A very flexible framework that can be used for small to large applications. It's known for its "pay only for what you eat" philosophy.
+- **Tornado**: An asynchronous networking library and web framework, originally developed at FriendFeed (later acquired by Facebook). Good for long polling, WebSockets, and other applications requiring a long-lived connection to each user.
+- **Sanic**: A Flask-like framework that is built on `uvloop` and designed for speed, supporting `async/await` syntax.
+
+Choosing a framework depends on the project's requirements, team familiarity, scalability needs, and the desired level of control versus built-in features. Many developers start with Flask or FastAPI for smaller projects or APIs, and Django for larger, more comprehensive applications.

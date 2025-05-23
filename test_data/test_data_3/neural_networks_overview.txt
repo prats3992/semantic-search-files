@@ -1,0 +1,4 @@
+Neural Networks are a class of machine learning models inspired by the structure and function of the human brain.
+They are composed of interconnected layers of nodes, or "neurons."
+Each connection has a weight that is adjusted during the training process.
+Deep learning refers to neural networks with many layers (deep architectures), which have achieved state-of-the-art results in many complex tasks like image and speech recognition.

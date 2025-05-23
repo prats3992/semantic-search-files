@@ -1,0 +1,4 @@
+Space debris, also known as orbital debris, poses a significant threat to active satellites and future space missions.
+It consists of defunct satellites, spent rocket stages, and fragments from collisions or explosions.
+Even small pieces of debris can cause catastrophic damage due to their high orbital velocities.
+Efforts are underway to track debris and develop mitigation strategies, including active debris removal technologies.

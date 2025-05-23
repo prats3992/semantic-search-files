@@ -1,0 +1,28 @@
+Black Holes: An Introduction
+
+What is a Black Hole?
+A black hole is a region of spacetime where gravity is so strong that nothing, not even light or other electromagnetic waves, has enough energy to escape its event horizon. The theory of general relativity predicts that a sufficiently compact mass can deform spacetime to form a black hole. The boundary of no escape is called the event horizon. Although it has an enormous effect on the fate and circumstances of an object crossing it, it has no locally detectable features according to general relativity. In many ways, a black hole acts like an ideal black body, as it reflects no light.
+
+Formation of Black Holes:
+Stellar black holes are formed when very massive stars collapse at the end of their life cycle. After a black hole has formed, it can continue to grow by absorbing mass from its surroundings. By absorbing other stars and merging with other black holes, supermassive black holes of millions of solar masses (M☉) may form. There is general consensus that supermassive black holes exist in the centers of most galaxies.
+
+Types of Black Holes:
+1.  Stellar Black Holes: Formed by the gravitational collapse of massive stars. They are typically 5 to tens of solar masses.
+2.  Intermediate-Mass Black Holes (IMBHs): Their masses range from hundreds to hundreds of thousands of solar masses. Their existence is still debated, though evidence is accumulating.
+3.  Supermassive Black Holes (SMBHs): The largest type of black hole, on the order of hundreds of thousands to billions of solar masses. They are found at the center of almost all known massive galaxies, including our own Milky Way.
+4.  Miniature Black Holes (Primordial Black Holes): Hypothetical black holes that could have formed in the early universe. They would be much smaller than stellar black holes.
+
+Detecting Black Holes:
+Black holes themselves are invisible. However, their presence can be inferred through their interaction with other matter and with electromagnetic radiation such as visible light.
+-   Gravitational Lensing: Light from distant objects can be bent around a black hole, making the object appear distorted or multiple images of it visible.
+-   Accretion Disks: If a black hole passes through a cloud of interstellar matter, or if it is close to another star, it can pull matter inward in a process known as accretion. The accreted matter forms an accretion disk, which heats up due to friction and emits X-rays and other radiation that can be detected by telescopes.
+-   Stellar Orbits: The orbits of stars around a point in space where no visible object exists can indicate the presence of a black hole. For example, observations of stars orbiting Sagittarius A* at the center of the Milky Way suggest it is a supermassive black hole.
+-   Gravitational Waves: The merger of two black holes creates ripples in spacetime called gravitational waves. These waves can be detected by observatories like LIGO and Virgo.
+
+Key Concepts:
+-   Event Horizon: The "point of no return" around a black hole. Once matter or light crosses the event horizon, it cannot escape.
+-   Singularity: At the center of a black hole, as predicted by general relativity, is a gravitational singularity, a region where the spacetime curvature becomes infinite.
+-   Schwarzschild Radius: The radius of the event horizon of a non-rotating, uncharged black hole. It depends on the black hole's mass.
+
+Unanswered Questions:
+Despite significant advancements, many mysteries about black holes remain. What happens to information that falls into a black hole (the information paradox)? What is the nature of the singularity? The study of black holes continues to be a vibrant area of research in astrophysics and theoretical physics.

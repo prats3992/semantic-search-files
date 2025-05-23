@@ -1,0 +1,18 @@
+# Core Semantic Search
+sentence-transformers
+faiss-cpu # Or faiss-gpu if you have a compatible GPU and CUDA installed
+
+# Potentially for CLI
+# click
+# typer
+
+# Potentially for GUI (if you go that route)
+# PyQt5
+# tkinter
+# streamlit
+
+# Other utilities
+# python-dotenv # For managing environment variables
+
+# For keyword extraction
+yake
