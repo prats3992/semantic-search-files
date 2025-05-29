@@ -1,10 +1,15 @@
 import json
 import os
+from dotenv import load_dotenv # Added for .env support
 
 CONFIG_FILE_NAME = "config.json"
 # Determine project root assuming this file is in src/ or a similar subdirectory.
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 DEFAULT_CONFIG_PATH = os.path.join(PROJECT_ROOT, CONFIG_FILE_NAME)
+
+# Load .env file from project root
+DOTENV_PATH = os.path.join(PROJECT_ROOT, '.env')
+load_dotenv(DOTENV_PATH)
 
 class ConfigManager:
     """Manages application configuration settings loaded from a JSON file."""
@@ -93,7 +98,6 @@ class ConfigManager:
             os.makedirs(smart_dirs_file_dir, exist_ok=True)
         return smart_dirs_file
 
-
     def get_recommended_models(self) -> list:
         """Returns a list of recommended sentence transformer models from the configuration."""
         return self.get_setting("recommended_models", [])
@@ -117,8 +121,18 @@ class ConfigManager:
         # Fallback if model not in recommended list or dimension not specified there
         # This part might be better handled by trying to load the model if not found,
         # but for config, it relies on the config entry.
-        print(f"Warning: Model '{model_name}' not found in recommended_models list in config or dimension not specified. Cannot determine dimension from config.")
+        print(f"Warning: Model '{model_name}' not found in recommended_models list in config or dimension not specified there. Cannot determine dimension from config.")
         return None
+
+    def get_gemini_api_key(self) -> str | None:
+        """Returns the Gemini API key from config.json or .env file."""
+        api_key = self.get_setting("gemini_api_key")
+        if not api_key:
+            api_key = os.getenv("GEMINI_API_KEY")
+        if not api_key:
+            print("Warning: GEMINI_API_KEY not found in config.json or .env file.")
+            return None
+        return api_key
 
 # For standalone testing of the ConfigManager class
 if __name__ == '__main__':

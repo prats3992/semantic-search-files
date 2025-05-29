@@ -16,3 +16,12 @@ faiss-cpu # Or faiss-gpu if you have a compatible GPU and CUDA installed
 
 # For keyword extraction
 yake
+
+# For .env file support
+python-dotenv
+
+# For DOCX processing
+python-docx
+
+# For Gemini API
+google-generativeai

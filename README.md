@@ -1,6 +1,6 @@
 # Advanced File System Navigator with Semantic Search
 
-**Version:** 1.1.0 (As of May 23, 2025)
+**Version:** 1.2.0 (As of May 29, 2025)
 
 This project provides a powerful command-line tool to navigate and search your file system using semantic understanding of file content, file tags, and other criteria. Instead of just matching keywords, it understands the meaning behind your queries and finds the most relevant files.
 
@@ -9,7 +9,10 @@ It uses state-of-the-art Sentence Transformer models to generate embeddings (num
 ## Key Features
 
 -   **File Discovery:** Scans specified directories for text-based files.
--   **Content Extraction:** Extracts plain text content from discovered files.
+-   **Content Extraction:** 
+    -   Extracts plain text content from discovered files.
+    -   Supports `.docx` files using `python-docx`.
+    -   Utilizes the Gemini API for content extraction from other file types like PDFs and images, if an API key is provided.
 -   **Embedding Generation:**
     -   Utilizes Sentence Transformer models to convert text content into meaningful vector embeddings.
     -   Supports selection of different models via a configuration file or command-line arguments.
@@ -48,12 +51,14 @@ It uses state-of-the-art Sentence Transformer models to generate embeddings (num
     -   `sf`: A group of sub-commands to manage Smart Folders (`create`, `remove`, `list`, `show`, `get-files`).
 -   **Configuration:**
     -   Uses a `config.json` file to manage settings like default models, index storage paths, tag file path, smart folders definition file path, and model details.
+    -   Supports a `.env` file for managing sensitive information like API keys (e.g., `GEMINI_API_KEY`).
 -   **Shell Script Wrappers:** Basic shell scripts are provided as examples.
 
 ## Project Structure
 
 ```
 semantic-search-files/
+├── .env                        # For API keys and other environment variables (e.g., GEMINI_API_KEY)
 ├── config.json                 # Configuration for models, paths, etc.
 ├── smart_directories.json      # Example/default for Smart Folder definitions
 ├── tags.json                   # Example/default for Tagging System data
@@ -100,6 +105,8 @@ semantic-search-files/
     ```bash
     pip install -r requirements.txt
     ```
+    This will install all necessary packages, including `sentence-transformers`, `faiss-cpu` (or `faiss-gpu`), `python-docx`, `google-generativeai`, and `python-dotenv`.
+
     **Note on FAISS:**
     -   The `requirements.txt` file specifies `faiss-cpu`.
     -   If you have a compatible NVIDIA GPU and want to use GPU-accelerated FAISS, you can install `faiss-gpu` instead:
@@ -115,6 +122,16 @@ semantic-search-files/
     -   Set `tag_file_path` (e.g., `"./tags.json"`).
     -   Set `smart_dirs_file_path` (e.g., `"./smart_folders_definitions.json"`).
     -   Add or update information in `recommended_models`.
+
+5.  **Set up Gemini API Key (Optional for advanced content extraction):**
+    If you plan to extract content from files like PDFs or images, you'll need a Gemini API key.
+    -   Create a file named `.env` in the root of the project (`semantic-search-files/.env`).
+    -   Add your Gemini API key to this file:
+        ```
+        GEMINI_API_KEY="YOUR_ACTUAL_GEMINI_API_KEY"
+        ```
+    -   Replace `"YOUR_ACTUAL_GEMINI_API_KEY"` with your real API key.
+    -   **Important:** Add `.env` to your `.gitignore` file to prevent committing your API key to version control.
 
 ## Usage
 
@@ -301,7 +318,7 @@ Make sure the scripts are executable (`chmod +x scripts/*.sh`).
 
 -   **Advanced File Navigation/Organization:** ~~Tagging System (manual & AI-suggested)~~, ~~Smart Folders~~. (Completed)
 -   **Index Management:** More granular control (status, clear specific index, list indexed directories/models).
--   **Enhanced Content Extraction:** Support for more file types (e.g., PDF, DOCX, code files with comment extraction).
+-   **Enhanced Content Extraction:** ~~Support for more file types (e.g., PDF, DOCX, code files with comment extraction).~~ (DOCX support added directly; PDF and other types supported via Gemini API).
 -   **Advanced FAISS Index Types:** Explore options for very large datasets.
 -   **Incremental Indexing:** Update index only for new/modified files without full re-scan.
 -   **User Authentication & Permissions:** For multi-user environments.
