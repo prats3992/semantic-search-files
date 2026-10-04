@@ -1,15 +1,23 @@
 # Python
-*__pycache__*
+__pycache__/
 *.py[cod]
-*$py.class
+*.egg-info/
+.pytest_cache/
+build/
+dist/
 
-# Virtual environment
+# Virtual environments
 .venv/
 venv/
-ENV/
 env/
-env.bak/
-venv.bak/
+
+# Secrets
+.env
+
+# Local data generated at runtime
+semantic_indices/
+semantic_tags.json
+smart_directories.json
 
 # IDEs and editors
 .vscode/
@@ -17,14 +25,6 @@ venv.bak/
 *.swp
 *.swo
 
-# Data files / Index (if stored locally and large)
-# data/index/
-
-# OS generated files
+# OS
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db

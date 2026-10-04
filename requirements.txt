@@ -1,27 +1,6 @@
-# Core Semantic Search
-sentence-transformers
-faiss-cpu # Or faiss-gpu if you have a compatible GPU and CUDA installed
-
-# Potentially for CLI
-# click
-# typer
-
-# Potentially for GUI (if you go that route)
-# PyQt5
-# tkinter
-# streamlit
-
-# Other utilities
-# python-dotenv # For managing environment variables
-
-# For keyword extraction
-yake
-
-# For .env file support
-python-dotenv
-
-# For DOCX processing
-python-docx
-
-# For Gemini API
-google-generativeai
+sentence-transformers>=2.2
+faiss-cpu>=1.7          # swap for faiss-gpu if you have a CUDA-capable GPU
+yake>=0.4               # keyword extraction for tag suggestions
+python-dotenv>=1.0      # loads GEMINI_API_KEY from .env
+python-docx>=1.0        # .docx text extraction
+google-genai>=1.0       # optional PDF/image extraction via Gemini

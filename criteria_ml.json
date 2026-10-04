@@ -1,6 +1,0 @@
-{
-    "base_directories": ["./test_data/test_data_3"],
-    "file_types": [".txt", ".md"],
-    "content_keywords_any_of": ["neural network", "machine learning"],
-    "semantic_query": "introduction to artificial intelligence"
-}

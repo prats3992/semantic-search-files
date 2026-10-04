@@ -1,0 +1,7 @@
+{
+    "base_directories": ["./examples/sample_docs/machine_learning"],
+    "file_types": [".txt", ".md"],
+    "content_keywords_any_of": ["neural network", "machine learning"],
+    "semantic_query": "beginner introduction to machine learning",
+    "semantic_threshold": 0.35
+}
